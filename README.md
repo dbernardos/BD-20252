@@ -34,6 +34,7 @@ id (INT, PK), nome_curso (VARCHAR), carga_horaria (INT)
 
 -- Tabela: matriculas
 id (INT, PK), aluno_id (INT, FK), curso_id (INT, FK), data_matricula (DATE)
+```
 
 ---
 
