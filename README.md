@@ -34,3 +34,27 @@ id (INT, PK), nome_curso (VARCHAR), carga_horaria (INT)
 
 -- Tabela: matriculas
 id (INT, PK), aluno_id (INT, FK), curso_id (INT, FK), data_matricula (DATE)
+
+---
+
+## 📦 Banco de Dados NoSQL (MongoDB Atlas)
+- Coleção: historico_alunos
+- Cada documento armazena:
+-- aluno_id: ID do aluno (vinculado ao MySQL)
+-- atividades: array com projetos, eventos, etc.
+-- observacoes: anotações de professores
+-- habilidades_extra: array com soft skills
+
+---
+
+## 💻 Aplicação PHP
+### Funcionalidades
+- Recebe o id do aluno pela URL (ex: painel_aluno.php?id=1)
+- Busca os dados principais no MySQL
+- Busca o histórico no MongoDB
+- Exibe tudo integrado em uma página web
+
+### Como Executar
+- Inicie o Apache e MySQL no XAMPP.
+- Coloque o arquivo painel_aluno.php na pasta htdocs.
+- Acesse no navegador: http://localhost/escola/painel_aluno.php?id=1
